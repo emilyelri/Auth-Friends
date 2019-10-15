@@ -31,3 +31,32 @@ body .header .navi button {
 body .header .navi .login-button {
   background-color: blueviolet;
 }
+body .login {
+  background-color: black;
+  color: white;
+  width: 30%;
+  max-width: 300px;
+  margin: 15% 0 0 35%;
+  padding: 20px 50px;
+  border: 2px solid blueviolet;
+  border-radius: 5px;
+}
+body .login .login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .login .login-form input {
+  margin: 5px auto;
+  padding: 5px;
+  border-radius: 5px;
+}
+body .login .login-form button {
+  background-color: blueviolet;
+  color: white;
+  width: 100px;
+  margin: 20px auto 0;
+  padding: 5px;
+  border-radius: 5px;
+}
