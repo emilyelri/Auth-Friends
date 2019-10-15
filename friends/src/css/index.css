@@ -1,0 +1,33 @@
+body {
+  font-size: 16px;
+  background-color: #292929;
+}
+body .header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000;
+  color: white;
+  margin: -20px 0 0 0;
+  border-bottom: 1px dotted blueviolet;
+  box-shadow: #000 3px 3px 3px 3px;
+}
+body .header h1 {
+  margin: 20px 0;
+  padding: 10px 20px 0;
+}
+body .header .navi {
+  align-self: flex-end;
+  margin: 20px;
+}
+body .header .navi button {
+  background-color: #292929;
+  color: white;
+  font-size: 1rem;
+  width: 100px;
+  margin: 0 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+body .header .navi .login-button {
+  background-color: blueviolet;
+}
