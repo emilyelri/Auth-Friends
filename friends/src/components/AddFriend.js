@@ -11,8 +11,8 @@ function AddFriend(props) {
     }
 
     const handleSubmit = e => {
-        const addFriend = {...friend};
-        props.createFriend(addFriend);
+        e.preventDefault();
+        props.createFriend({...friend, age: parseInt(friend.age)});
         setFriend({name: '', age: 1, email: ''});
         props.history.push('/friends');
     }
@@ -27,11 +27,11 @@ function AddFriend(props) {
                 <input type="text" name="name" placeholder="friend name" onChange={handleChanges} />
                 <input type="number" name="age" placeholder="friend age" onChange={handleChanges} />
                 <input type="text" name="email" placeholder="friend email" onChange={handleChanges} />
+                <div className="footer">
+                    <Link to='/friends'><button>Cancel</button></Link>
+                    <button type="submit">Save</button>
+                </div>
             </form>
-        </div>
-        <div className="footer">
-            <Link to='/friends'><button>Cancel</button></Link>
-            <button>Save</button>
         </div>
     </div>
     )

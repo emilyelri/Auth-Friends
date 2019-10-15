@@ -1,4 +1,4 @@
-import axios from 'axios';
+import { axiosWithAuth } from '../utils/axiosWithAuth';
 
 export const FETCH_FRIENDS_START = "FETCH_FRIENDS_START";
 export const FETCH_FRIENDS_SUCCESS = "FETCH_FRIENDS_SUCCESS";
@@ -7,13 +7,11 @@ export const CREATE_FRIEND_START = "CREATE_FRIEND_START";
 export const CREATE_FRIEND_SUCCESS = "CREATE_FRIEND_SUCCESS";
 export const CREATE_FRIEND_FAILURE = "CREATE_FRIEND_FAILURE";
 
-const api = 'http://localhost:5000/api/friends';
-
 export const getFriends = () => dispatch => {
     dispatch ({ type: FETCH_FRIENDS_START });
 
-    axios
-    .get(`${api}`)
+    axiosWithAuth()
+    .get(`/api/friends`)
     .then(response => {
         console.log(response);
         dispatch({ type: FETCH_FRIENDS_SUCCESS, payload: response.data })
@@ -26,10 +24,11 @@ export const getFriends = () => dispatch => {
   
   export const createFriend = friend => dispatch => {
     dispatch({ type: CREATE_FRIEND_START });
-    axios.post(`${api}`, friend)
+    axiosWithAuth()
+    .post(`/api/friends`, friend)
     .then(response => {
         console.log(response);
-        dispatch({ type: CREATE_FRIEND_SUCCESS, payload: response })
+        dispatch({ type: CREATE_FRIEND_SUCCESS, payload: response.data })
     })
     .catch(error => {
         console.log(error.message);
