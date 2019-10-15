@@ -4,29 +4,35 @@ import { connect } from 'react-redux';
 import Friend from './Friend';
 import { getFriends } from '../actions';
 
-function FriendsList(props) {
+class FriendsList extends React.Component {
 
-    useEffect(() => {
-        props.getFriends();
-    }, [])
+    constructor(props) {
+        super(props);
+    }
 
-    return (
-        <>
-        
-        {props.isFetching && <p className="fetching">Fetching...</p>}
-        {props.friends && 
-        <div className="friends-list">
-            <div className="header">
-                <h2>Friend's List</h2>
-                <Link to='/add'><button>Add Friend</button></Link>
+    componentDidMount() {
+        this.props.getFriends();
+    }
+
+    render() {
+        return (
+            <>
+            
+            {this.props.isFetching && <p className="fetching">Fetching...</p>}
+            {this.props.friends && 
+            <div className="friends-list">
+                <div className="header">
+                    <h2>Friend's List</h2>
+                    <Link to='/add'><button>Add Friend</button></Link>
+                </div>
+                {this.props.friends.map(friend => (
+                    <Friend key={friend.id} name={friend.name} age={friend.age} email={friend.email}/>
+                ))}
             </div>
-            {props.friends.map(friend => (
-                <Friend key={friend.id} name={friend.name} age={friend.age} email={friend.email}/>
-            ))}
-        </div>
-        }
-        </>
-    )
+            }
+            </>
+        )
+    }
 }
 
 const mapStateToProps = state => ({
