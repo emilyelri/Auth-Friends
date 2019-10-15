@@ -11,9 +11,13 @@ body {
         border-bottom: 1px dotted blueviolet;
         box-shadow: #000 3px 3px 3px 3px;
 
-        h1 {
-            margin: 20px 0;
-            padding: 10px 20px 0;
+        .logo {
+            text-decoration: none;
+            color: white;
+            h1 {
+                margin: 20px 0;
+                padding: 10px 20px 0;
+            }
         }
 
         .navi {
@@ -69,6 +73,75 @@ body {
                 border-radius: 5px;
             }
         }
+    }
+
+    .friends-list {
+        background-color: black;
+        color: white;
+
+        width: 60%;
+        max-width: 800px;
+        margin: 5% auto;
+        padding: 20px 50px;
+
+        border: 2px solid blueviolet;
+        border-radius: 5px;
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            button {
+                background-color: blueviolet;
+                color: white;
+                width: 100px;
+                padding: 5px;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .add-friend {
+        background-color: black;
+        color: white;
+
+        width: 50%;
+        max-width: 300px;
+        margin: 5% auto;
+        padding: 20px 50px;
+
+        border: 2px solid blueviolet;
+        border-radius: 5px;
+
+        .add-form {
+            form {
+                display: flex;
+                flex-direction: column;
+                input {
+                    width: 90%;
+                    margin: 10px auto;
+                }
+            }
+        }
+
+        .footer {
+            display: flex;
+            justify-content: flex-end;
+
+            button {
+                background-color: blueviolet;
+                color: white;
+                width: 75px;
+                margin: 10px 5px;
+                padding: 5px;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .friend {
+        border-bottom: 1px dotted blueviolet;
     }
 
 }

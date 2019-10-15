@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { axiosWithAuth } from '../axiosWithAuth';
+import { axiosWithAuth } from '../utils/axiosWithAuth';
 
 export default function Login(props) {
 
@@ -19,7 +19,7 @@ export default function Login(props) {
         .then(response => {
             console.log(response);
             localStorage.setItem('token', response.data.payload);
-            props.history.push('/protected');
+            props.history.push('/friends');
         })
         .catch(error => {
             console.log(error);
