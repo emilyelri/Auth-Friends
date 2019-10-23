@@ -1,0 +1,121 @@
+body {
+  font-size: 16px;
+  background-color: #292929;
+}
+body .header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000;
+  color: white;
+  margin: -20px 0 0 0;
+  border-bottom: 1px dotted blueviolet;
+  box-shadow: #000 3px 3px 3px 3px;
+}
+body .header .logo {
+  text-decoration: none;
+  color: white;
+}
+body .header .logo h1 {
+  margin: 20px 0;
+  padding: 10px 20px 0;
+}
+body .header .navi {
+  align-self: flex-end;
+  margin: 20px;
+}
+body .header .navi button {
+  background-color: #292929;
+  color: white;
+  font-size: 1rem;
+  width: 100px;
+  margin: 0 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+body .header .navi .login-button {
+  background-color: blueviolet;
+}
+body .login {
+  background-color: black;
+  color: white;
+  width: 30%;
+  max-width: 300px;
+  margin: 15% 0 0 35%;
+  padding: 20px 50px;
+  border: 2px solid blueviolet;
+  border-radius: 5px;
+}
+body .login .login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .login .login-form input {
+  margin: 5px auto;
+  padding: 5px;
+  border-radius: 5px;
+}
+body .login .login-form button {
+  background-color: blueviolet;
+  color: white;
+  width: 100px;
+  margin: 20px auto 0;
+  padding: 5px;
+  border-radius: 5px;
+}
+body .friends-list {
+  background-color: black;
+  color: white;
+  width: 60%;
+  max-width: 800px;
+  margin: 5% auto;
+  padding: 20px 50px;
+  border: 2px solid blueviolet;
+  border-radius: 5px;
+}
+body .friends-list .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .friends-list .header button {
+  background-color: blueviolet;
+  color: white;
+  width: 100px;
+  padding: 5px;
+  border-radius: 5px;
+}
+body .add-friend {
+  background-color: black;
+  color: white;
+  width: 50%;
+  max-width: 300px;
+  margin: 5% auto;
+  padding: 20px 50px;
+  border: 2px solid blueviolet;
+  border-radius: 5px;
+}
+body .add-friend .add-form form {
+  display: flex;
+  flex-direction: column;
+}
+body .add-friend .add-form form input {
+  width: 90%;
+  margin: 10px auto;
+}
+body .add-friend .footer {
+  display: flex;
+  justify-content: flex-end;
+}
+body .add-friend .footer button {
+  background-color: blueviolet;
+  color: white;
+  width: 75px;
+  margin: 10px 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+body .friend {
+  border-bottom: 1px dotted blueviolet;
+}

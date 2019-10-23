@@ -1,0 +1,147 @@
+body {
+    font-size: 16px;
+    background-color: #292929;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        background-color: #000;
+        color: white;
+        margin: -20px 0 0 0;
+        border-bottom: 1px dotted blueviolet;
+        box-shadow: #000 3px 3px 3px 3px;
+
+        .logo {
+            text-decoration: none;
+            color: white;
+            h1 {
+                margin: 20px 0;
+                padding: 10px 20px 0;
+            }
+        }
+
+        .navi {
+            align-self: flex-end;
+            margin: 20px;
+            
+            button {
+                background-color: #292929;
+                color: white;
+                font-size: 1rem;
+                width: 100px;
+                margin: 0 10px;
+                padding: 5px;
+                border-radius: 5px;
+            }
+
+            .login-button {
+                background-color: blueviolet;
+            }
+        }
+    }
+
+    .login {
+        background-color: black;
+        color: white;
+
+        width: 30%;
+        max-width: 300px;
+        margin: 15% 0 0 35%;
+        padding: 20px 50px;
+
+        border: 2px solid blueviolet;
+        border-radius: 5px;
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            input {
+                margin: 5px auto;
+                padding: 5px;
+                border-radius: 5px;
+            }
+
+            button {
+                background-color: blueviolet;
+                color: white;
+                width: 100px;
+                margin: 20px auto 0;
+                padding: 5px;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .friends-list {
+        background-color: black;
+        color: white;
+
+        width: 60%;
+        max-width: 800px;
+        margin: 5% auto;
+        padding: 20px 50px;
+
+        border: 2px solid blueviolet;
+        border-radius: 5px;
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            button {
+                background-color: blueviolet;
+                color: white;
+                width: 100px;
+                padding: 5px;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .add-friend {
+        background-color: black;
+        color: white;
+
+        width: 50%;
+        max-width: 300px;
+        margin: 5% auto;
+        padding: 20px 50px;
+
+        border: 2px solid blueviolet;
+        border-radius: 5px;
+
+        .add-form {
+            form {
+                display: flex;
+                flex-direction: column;
+                input {
+                    width: 90%;
+                    margin: 10px auto;
+                }
+            }
+        }
+
+        .footer {
+            display: flex;
+            justify-content: flex-end;
+
+            button {
+                background-color: blueviolet;
+                color: white;
+                width: 75px;
+                margin: 10px 5px;
+                padding: 5px;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .friend {
+        border-bottom: 1px dotted blueviolet;
+    }
+
+}
